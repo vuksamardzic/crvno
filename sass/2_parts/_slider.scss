@@ -1,0 +1,233 @@
+$height_max : 580px;
+$height_max_l : 650px;
+$dot : 28px;
+$dot_active : 30px;
+
+
+.owl-carousel.owl-loaded
+{
+	@extend .container-fluid;
+	margin: 0 0 -98px 0;
+	padding: 0;
+	position: relative;
+	top: -98px;
+}
+
+	.owl-stage-outer
+	{
+		max-width: 1680px;
+		max-height: $height_max;
+		min-height: $height_max;
+
+		.slider-text
+		{
+			position: relative;
+			max-width: 1024px;
+			margin: 0 auto;
+			p
+			{
+				font-family: RobotoBold;
+				font-size: 54.25px;
+				line-height: 74px;
+				position: absolute;
+				margin: 0 auto;
+				color: white;
+				z-index: 100;
+				padding: 0 25px;
+
+				&:nth-child(1)
+				{
+					background: url("../img/up_text_back.png") 0 0 repeat;
+					top: 402px;
+				}
+
+				&:nth-child(2)
+				{
+					background: url("../img/down_text_back.png") 0 0 repeat;
+					top: 476px;
+				}
+			}
+		}
+	}
+
+	.owl-nav
+	{
+		max-width: 1110px;
+		width: 100%;
+    	position: relative;
+ 		margin: -$height_max auto 0 auto;
+ 		height: $height_max;
+
+ 		.owl-next, .owl-prev
+ 		{
+			position: absolute;
+		    width: 42px;
+		    height: 84px;	
+		    top: 50%;
+		    margin-top: -42px;
+ 		}
+
+		.owl-next
+		{
+		    right: 0;
+		    background: url("../img/arrow_right.png") 0 0 no-repeat;
+		}
+
+		.owl-prev
+		{
+		    left: 0;
+		    background: url("../img/arrow_left.png") 0 0 no-repeat;
+		}
+
+		.owl-next:hover
+		{
+			background: url("../img/arrow_right_over.png") 0 0 no-repeat;
+		}
+
+		.owl-prev:hover
+		{
+			background: url("../img/arrow_left_over.png") 0 0 no-repeat;
+		}
+	}
+
+	.owl-dots
+	{
+		position : relative;
+		max-width: 1024px;
+		width: 100%;
+		text-align: right;
+		margin: -40px auto 0 auto;
+
+		.owl-dot
+		{
+			margin-left : 15px; 
+			display : inline-block;
+			width: $dot;
+			height: $dot;
+			background-image: url("../img/dot.png");
+		}
+
+		.owl-dot.active
+		{
+			width: $dot_active;
+			height: $dot_active;
+			background-image: url("../img/dot_active.png");
+		}
+
+	}
+
+
+@media only screen and (max-width: 1000px)
+{
+	.owl-stage-outer
+	{
+		min-height: auto;
+	}
+
+	.slider-text
+	{
+		display: none;
+	}
+
+}
+
+@media only screen and (min-width: 1367px)
+{
+	.owl-stage-outer
+	{
+		max-height: $height_max_l !important;
+		min-height: $height_max_l !important;
+
+		.slider-text
+		{
+			p
+			{
+				&:nth-child(1)
+				{
+					background: url("../img/up_text_back.png") 0 0 repeat;
+					top: 472px;
+				}
+
+				&:nth-child(2)
+				{
+					background: url("../img/down_text_back.png") 0 0 repeat;
+					top: 546px;
+				}
+			}
+		}
+	}
+
+	.owl-nav
+	{
+ 		margin: -$height_max_l auto 0 auto !important;
+ 		height: $height_max_l !important;
+ 	}
+}
+
+@media (max-width: 850px) 
+{
+    .navbar-header 
+    {
+        float: none;
+    }
+
+    .navbar-toggle 
+    {
+        display: block;
+    }
+
+    .navbar-collapse 
+    {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+
+    .navbar-collapse.collapse 
+    {
+        display: none!important;
+    }
+    .navbar-nav 
+    {
+        float: none!important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    .navbar-nav>li 
+    {
+        float: none;
+        display: block !important;
+        padding: 0 30px !important;
+    }
+	
+	
+	.nav.navbar-nav li a
+	{
+		text-align: center;
+	}	
+	
+    .navbar-text 
+    {
+        float: none;
+    }
+
+    .navbar-collapse.collapse.in 
+    { 
+        display: block!important;
+    }
+    
+    .collapsing 
+    {
+        overflow: hidden!important;
+    }
+
+}
+
+ @media (max-width: 380px) 
+{
+	.img-responsive.logo
+	{
+		margin-top: 8px;
+		width: 215px;
+	}
+}

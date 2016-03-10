@@ -1,0 +1,300 @@
+.search
+{
+	@extend .container-fluid;
+	font-family: RobotoRegular;
+	margin: 0;
+	padding: 0;
+	min-height: 98px;
+	background: url("../img/search_bg.png") repeat 0 0;
+	position: relative;
+	z-index: 100; 
+
+	.row
+	{
+		max-width: 1024px;
+		margin: 0 auto;
+		padding: 24px 0;
+
+		.search-bar
+		{
+			@extend .input-group;
+			max-width: 813px;
+			max-height: 50px;
+			width: 100%;
+			float: left;
+
+			.form-control
+			{
+				height: 50px;
+				width: 31.5%;
+				font-size: 16px;
+				padding: 20px 30px;
+				background: white url("../img/lupa.png") 91% center no-repeat;
+			}
+			
+			#fill:-ms-input-placeholder
+			{
+				color: #33479c;
+			}
+
+			#fill:-moz-placeholder
+			{
+				color: #33479c;
+			}
+
+			#fill::-moz-placeholder
+			{
+				color: #33479c;
+			}
+
+			#fill::-webkit-input-placeholder
+			{
+				color: #33479c;
+			}
+
+			span.dropdown-bar
+			{
+				width: 13.7%;
+			}
+
+			.dropdown-bar
+			{
+
+				@extend .input-group-btn;
+				width: auto;
+				float: left;
+
+				&.one
+				{
+    				width: 29.8% !important;
+				}
+
+				&.two	
+				{
+					width: 25% !important;
+				}	
+
+				.dropdown-button
+				{
+					@extend .btn, .dropdown-toggle;
+					color: #919191;
+					border-radius: 0;
+					border: none;
+					border-right: 1px solid #e6e6e6;
+					font-size: 16px;
+					background: white url("../img/caret.png") 92% center no-repeat;
+					padding: 14px 69px 14px 24px;
+				}
+
+				.dropdown-button:hover
+				{
+					color: #33479c;
+					background: white url("../img/caret_over.png") 92% center no-repeat;
+				}
+
+				.dropdown-menu
+				{
+					width: 100%;
+					margin: 0 auto;
+					padding: 0;
+					text-align: center;
+					border-radius: 0;
+					border: none;
+
+					li
+					{
+						border: 1px solid #e6e6e6;
+						border-bottom: none;
+						a
+						{
+							padding: 19px 23px;
+							color: #919191;
+						}
+
+					} 
+
+					li:last-child
+					{
+						border-bottom: 1px solid #e6e6e6;
+					}
+
+					li:hover
+					{
+						border: 1px solid #33479c;
+						background-color: #33479c;
+
+						a
+						{
+							color: white;
+						}
+					}
+
+					a:hover
+					{
+						background-color: #33479c;
+						color: white;
+					}
+				}
+
+				.search-button
+				{
+					@extend .btn;
+					font-family: RobotoBold;
+					font-size: 16px;
+					color: white;
+					background-color: #7bc8ef;
+					border: none;
+					border-radius: 0 4px 4px 0;
+					height: 50px;
+					padding: 0 30px;
+				}
+
+
+
+				.search-button:hover,
+				{
+					color: #33479c;
+				}
+
+			}
+
+			.dropdown-bar.open
+			{
+				.dropdown-button
+				{
+					color: #33479c;
+					background: white url("../img/caret_over.png") 92% center no-repeat;
+				}
+			}
+
+			.input-button
+			{
+				@extend .btn;
+				display: none;
+			    width: 20%;
+			    font-family: RobotoBold;
+			    font-size: 16px;
+			    color: white;
+			    background-color: #7bc8ef;
+			    border: none;
+			    border-radius: 0 4px 4px 0;
+			    height: 50px;
+			}
+
+		/*search-bar end*/
+		}
+
+		a.search-img div
+		{
+			width: 184px;
+			height: 47px;
+			margin-left: auto;
+			background: url("../img/search_logo.png") center center no-repeat;
+
+			&:hover
+			{
+				-webkit-transform: rotateX(360deg);
+				-webkit-transform-style: preserve-3d;
+				transform: rotateX(360deg);
+				transform-style: preserve-3d;
+				-webkit-transition: all 1s ease-out;
+				transition: all 1s ease-out;
+				background: url("../img/search_logo_over.png") center center no-repeat;
+			}
+
+		}
+
+	}
+}
+
+@media only screen and (max-width: 1200px)
+{
+
+	.row
+	{
+		max-width: 800px !important;
+	}
+
+	.dropdown-bar
+	{
+		&.one
+		{
+			display: none !important;
+		}
+
+		&.two	
+		{
+			display: none !important;
+		}
+	}
+
+	.search-bar
+	{
+		max-width: none !important;
+		width: 70% !important;
+		margin-left: 10px;
+
+		.form-control
+		{
+			max-width: 500px !important;
+			width: 80% !important;
+			background-position: 95% center !important;
+		}
+
+		.input-button
+		{
+			display: inline-block !important;
+		}
+
+		.search-button
+		{
+			display: none !important;
+		}
+	}
+}
+
+@media only screen and (max-width: 691px)
+{
+
+	.search-bar
+	{
+		max-width: none !important;
+		width: 90% !important;
+		margin-left: 5% !important;
+		margin-right: 5% !important;
+		float: none !important;
+
+		.form-control
+		{
+			width: 80% !important;
+			font-size: 14px !important;
+			background-image: none !important;
+		}
+
+		.input-button
+		{
+			display: inline-block !important;
+			width: 20% !important;
+			font-size: 0 !important;
+			background: #7bc8ef url("../img/lupa.png") center center no-repeat !important;
+		}
+
+		.search-button
+		{
+			display: none !important;
+		}
+	}
+
+	a.search-img div
+	{
+		margin: 24px auto 0 auto;
+	}
+
+
+	.owl-carousel.owl-loaded
+	{
+		margin: 0 !important;
+		top: 0 !important;
+	}
+
+}
