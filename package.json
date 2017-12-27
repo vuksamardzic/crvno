@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/xemichar/crvno.git"
   },
-  "author": "Vuk Samardžić",
+  "author": "Vuk Samardžić <samardzic.vuk@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/xemichar/crvno/issues"
